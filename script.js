@@ -50,10 +50,7 @@ async function insertarDatosPorPrompt() {
   await insertarDatos(datos);
 }
 
+// Al final de tu archivo script.js
 window.insertarDatosPorPrompt = insertarDatosPorPrompt;
 
-// Ejemplo de uso en navegador:
-// insertarDatos([{ ... }]);
-// datos();
-console.log('script.js cargado');
 
