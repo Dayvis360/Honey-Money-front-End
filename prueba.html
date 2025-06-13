@@ -13,7 +13,45 @@
 
     
 
-    <script type="module" src="Honey-Money/script.js"></script>
+    <script >
+        async function insertarDatos(datos) {
+  const { data, error } = await supabase
+    .from('usuario')
+    .insert(datos)
+    .select();
+  if (error) {
+    console.error('Error al insertar:', error);
+  } else {
+    console.log('Datos insertados:', data);
+  }
+}
+
+// Función para pedir datos por prompt y luego insertarlos
+async function insertarDatosPorPrompt() {
+  const Nombre_completo = prompt('Nombre completo:');
+  const DNI = parseInt(prompt('DNI:'), 10);
+  const Fecha_de_nacimiento = prompt('Fecha de nacimiento (YYYY-MM-DD):');
+  const Nacionalidad = prompt('Nacionalidad:');
+  const Correo_electronico = prompt('Correo electrónico:');
+  const Numero_de_celular = parseInt(prompt('Número de celular:'), 10);
+  const Contraseña = prompt('Contraseña:');
+
+  const datos = [{
+    Nombre_completo,
+    DNI,
+    Fecha_de_nacimiento,
+    Nacionalidad,
+    Correo_electronico,
+    Numero_de_celular,
+    Contraseña
+  }];
+  await insertarDatos(datos);
+}
+
+// Al final de tu archivo script.js
+window.insertarDatosPorPrompt = insertarDatosPorPrompt;
+
+    </script>
 
 </body>
 </html>
