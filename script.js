@@ -55,4 +55,5 @@ window.insertarDatosPorPrompt = insertarDatosPorPrompt;
 // Ejemplo de uso en navegador:
 // insertarDatos([{ ... }]);
 // datos();
+console.log('script.js cargado');
 
