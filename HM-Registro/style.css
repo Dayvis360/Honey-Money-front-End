@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.login-contenedor {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+h1 {
+    text-align: center;
+    color: #e09b23;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="password"] {
+    padding: 10px;
+    padding-right: 40px;
+    border: 2px solid #e09b23;
+    border-radius: 15px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #d98c17;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.image-upload-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.image-upload {
+    flex: 1 1 30%;
+    text-align: center;
+    border: 2px solid #e09b23;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #000;
+    box-sizing: border-box;
+}
+
+.image-upload img {
+    width: 100%;
+    max-width: 60px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.signin-btn {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #e09b23;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.signin-btn:hover {
+    background-color: #d38c1b;
+}
+
+/* 🔽 MEDIA QUERY para pantallas pequeñas */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .image-upload {
+        flex: 1 1 100%;
+    }
+
+    .toggle-password {
+        font-size: 1em;
+        right: 10px;
+    }
+}
