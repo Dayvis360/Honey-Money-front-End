@@ -23,7 +23,7 @@ async function insertarUsuario(usuario) {
         // Si se inserta correctamente, muestra los datos insertados
         console.log("Usuario insertado:", data);
         alert("Usuario insertado: " );
-        window.location.href = "login/inicio sesion.html";
+        window.location.href = "login/login.html";
     }
 }
 
