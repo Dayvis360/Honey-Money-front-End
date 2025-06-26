@@ -21,7 +21,7 @@ body {
 
 h1 {
     text-align: center;
-    color: #e09b23;
+    color: #f4b400;
     font-size: 2em;
     margin-bottom: 20px;
 }
@@ -45,7 +45,7 @@ input[type="date"],
 input[type="password"] {
     padding: 10px;
     padding-right: 40px;
-    border: 2px solid #e09b23;
+    border: 2px solid #f4b400;
     border-radius: 15px;
     outline: none;
     font-size: 1rem;
@@ -55,7 +55,7 @@ input[type="password"] {
 }
 
 input:focus {
-    border-color: #d98c17;
+    border-color: #f4b400;
 }
 
 .toggle-password {
@@ -79,7 +79,7 @@ input:focus {
 .image-upload {
     flex: 1 1 30%;
     text-align: center;
-    border: 2px solid #e09b23;
+    border: 2px solid #f4b400;
     border-radius: 20px;
     padding: 10px;
     font-size: 0.9rem;
@@ -97,7 +97,7 @@ input:focus {
 .signin-btn {
     margin-top: 20px;
     padding: 12px;
-    background-color: #e09b23;
+    background-color: #f4b400;
     border: none;
     border-radius: 15px;
     color: white;
@@ -109,7 +109,7 @@ input:focus {
 }
 
 .signin-btn:hover {
-    background-color: #d38c1b;
+    background-color: #f4b400;
 }
 
 /* 🔽 MEDIA QUERY para pantallas pequeñas */
