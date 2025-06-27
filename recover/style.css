@@ -1,0 +1,105 @@
+/* Estilos generales y centrado */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Contenedor principal */
+.contenedor-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ventana de recuperación */
+.ventana-recuperacion {
+  background-color: white;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  position: relative;
+}
+
+/* Encabezado */
+.encabezado-recuperacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titulo-recuperacion {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.boton-cerrar {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Mensaje de confirmación */
+.mensaje-confirmacion {
+  background-color: #f7f7f7;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.icono-info {
+  margin-right: 6px;
+}
+
+/* Formulario */
+.formulario-recuperacion {
+  display: flex;
+  flex-direction: column;
+}
+
+.etiqueta-telefono,
+.etiqueta-codigo {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.campo-telefono,
+.campo-codigo {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+.campo-telefono:disabled {
+  background-color: #eee;
+}
+
+/* Botón */
+.boton-confirmar {
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #0099ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.boton-confirmar:hover {
+  background-color: #007dd6;
+}
