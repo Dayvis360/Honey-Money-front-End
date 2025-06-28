@@ -67,14 +67,14 @@ body {
   flex-direction: column;
 }
 
-.etiqueta-telefono,
+.etiqueta-correo,
 .etiqueta-codigo {
   margin-top: 10px;
   font-size: 14px;
   color: #666;
 }
 
-.campo-telefono,
+.campo-correo,
 .campo-codigo {
   padding: 10px;
   border: 1px solid #ccc;
@@ -92,7 +92,7 @@ body {
   margin-top: 20px;
   padding: 12px;
   font-size: 16px;
-  background-color: #0099ff;
+  background-color: #f4b400;
   color: white;
   border: none;
   border-radius: 6px;
@@ -101,5 +101,5 @@ body {
 }
 
 .boton-confirmar:hover {
-  background-color: #007dd6;
+  background-color: #c29415;
 }
