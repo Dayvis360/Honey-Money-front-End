@@ -8,31 +8,36 @@
   <link rel="icon" type="image/png" href="publicity/imagenes/logo.png" />
 </head>
 <body>
-  
-  <header class="cabecera-sitio">
-    <div class="logo-sitio">
-      <img src="publicity/imagenes/logo.png" alt="Logo del sitio" />
-    </div>
-  </header>
+  <p>hola mundo</p>
+  <!-- index.html -->
+<button id="cargar">Cargar usuarios</button>
+<ul id="lista"></ul>
 
-  <section class="seccion-principal">
-    <div class="contenido-principal">
-      <h1>Honey Money</h1>
-      <h2>Una billetera simplificada para<br> todos.</h2>
-      <p>Hay formas más inteligentes de gestionar el dinero, y Honey Money lo demuestra en cada detalle: una 
-        experiencia ágil y precisa, que se adapta de manera natural a cada usuario. A medida que se utiliza, su 
-        tecnología basada en inteligencia artificial comienza a anticipar necesidades, optimizar hábitos y ofrecer 
-        soluciones sin invadir, con la discreción de un asistente que siempre está un paso adelante. El uso cotidiano 
-        no solo es simple y seguro, sino que además se transforma en un beneficio constante: cuanto más se interactúa, 
-        más valor se obtiene. Porque Honey Money no es solo una billetera virtual, es una nueva manera de relacionarse 
-        con el dinero, basada en confianza, inteligencia y cercanía.</p>
-      <a href="login/login.html" class="boton-inicio">Comenzar ahora →</a>
-    </div>
+<script>
+  console.log("hola mundo");
+document.getElementById("cargar").addEventListener("click", () => {
+  fetch("http://localhost:3000/usuarios")  // tu endpoint del backend
+    .then(res => res.json())
+    .then(data => {
+      const lista = document.getElementById("lista");
+      lista.innerHTML = "";
+      if (data.length === 0) {
+        const li = document.createElement("li");
+        li.textContent = "No hay usuarios";
+        lista.appendChild(li);
+      } else {
+        data.forEach(usuario => {
+          const li = document.createElement("li");
+          li.textContent = usuario.nombre;
+          lista.appendChild(li);
+        });
+      }
+    })
+    .catch(error => console.error("Error:", error));
+});
+console.log("finalizado")
+</script>
 
-    <div class="imagenes-principales">
-      <img src="publicity/imagenes/promocion.png" alt="Vista de escritorio" class="imagen-escritorio">
-    </div>
-  </section>
 
 </body>
 </html>
