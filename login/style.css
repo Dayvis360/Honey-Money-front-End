@@ -1,119 +1,165 @@
+/* Reset básico y estilos globales */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: #f9fbfc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: transparent; /* Fondo sin color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
-/* Cabecera */
+/* Cabecera con logo */
 .cabecera-sitio {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 20px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
 }
 
 .logo-sitio img {
-  height: 50px; /* un poco más grande */
-  width: auto;  /* que mantenga proporción */
+  height: 50px;
 }
 
-.login-contenedor {
-    background-color: #fff;
-    padding: 40px 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+/* Contenedor del login */
+.contenedor-login {
+  background-color: #fff0b3;
+  border: 3px solid #ffd83d;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 100px; /* separa del logo fijo */
 }
 
-.login-box h1 {
-    color: #f4b400;
-    font-size: 28px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 25px;
+/* Formulario */
+.formulario-login {
+  display: flex;
+  flex-direction: column;
+  color: #4d2e00;
 }
 
-.login-box t {
-    display: block;
-    color: #333;
-    font-size: 14px;
-    margin: 10px 0 5px;
+.formulario-login h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 26px;
 }
 
-.input-group {
-    position: relative;
+/* Etiquetas */
+.formulario-login label {
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
-.input-group input {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #f4b400;
-    border-radius: 6px;
-    font-size: 14px;
-    outline: none;
-    margin-bottom: 15px;
-    transition: border-color 0.3s;
+/* Campos de entrada */
+.grupo-input,
+.grupo-campo {
+  position: relative;
+  margin-bottom: 20px;
 }
 
-.input-group input:focus {
-    border-color: #e1a600;
+.grupo-input input,
+.grupo-campo input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff7cc;
+  font-size: 14px;
+  color: #333;
 }
 
-.toggle-password {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    font-size: 18px;
+.grupo-input input::placeholder,
+.grupo-campo input::placeholder {
+  color: #aaa;
 }
 
-.password-hint {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 13px;
-    margin-bottom: 15px;
+/* Ícono mostrar/ocultar contraseña */
+.icono-ojo {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
 }
 
-.password-hint a {
-    text-decoration: none;
-    color: #f4b400;
+.icono-ojo:hover {
+  opacity: 1;
 }
 
-.signin-btn {
-    width: 100%;
-    padding: 12px;
-    background-color: #f4b400;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+/* Ayuda para contraseña */
+.ayuda-contraseña {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 20px;
 }
 
-.signin-btn:hover {
-    background-color: #e1a600;
+.ayuda-contraseña a {
+  text-decoration: none;
+  color: #e6b800;
+  font-weight: bold;
 }
 
-.signup-link {
-    text-align: center;
-    margin-top: 15px;
-    font-size: 14px;
+/* Botón de ingresar */
+.boton-ingresar {
+  background-color: #ffd83d;
+  color: #4d2e00;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-.signup-link a {
-    color: #f4b400;
-    text-decoration: none;
+.boton-ingresar:hover {
+  background-color: #f0c200;
+}
+
+/* Enlace de registro */
+.enlace-registro {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+  color: #4d2e00;
+}
+
+.enlace-registro a {
+  color: #e6b800;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .contenedor-login {
+    padding: 30px 20px;
+  }
+
+  .formulario-login h1 {
+    font-size: 22px;
+  }
+
+  .boton-ingresar {
+    font-size: 15px;
+  }
+
+  .icono-ojo {
+    width: 20px;
+    height: 20px;
+  }
 }

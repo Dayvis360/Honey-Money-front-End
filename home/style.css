@@ -1,232 +1,255 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #fff8dc;
-    color: #333;
+  font-family: Arial, sans-serif;
+  background-color: #fff3c4;
+  color: #333;
+  padding: 15px;
+  max-width: 500px;
+  margin: auto;
+  padding-bottom: 80px; /* espacio para el menú inferior */
 }
 
-.header {
-    background-color: #f4c430;
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
+img {
+  max-width: 100%;
+  height: auto;
+  max-height: 50px;
 }
 
-.logo {
-    height: 40px;
-    width: 40px;
+/* Encabezado */
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffdb5c;
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
-.brand {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #6b4e00;
-    margin-left: 10px;
+.logo-nombre {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.container {
-    padding: 20px;
+.logo-nombre img {
+  height: 28px;
+  display: block;
 }
 
-h2 {
-    margin: 0 0 15px 0;
+.sigla {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #333;
 }
 
-.balance-card {
-    background-color: #f4c430;
-    border-radius: 15px;
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 20px;
+.saludo {
+  font-size: 1.1em;
+  color: #333;
+  white-space: nowrap;
 }
 
-.balance-card span {
-    font-weight: bold;
+/* Saldo */
+.saldo {
+  background-color: #fff1a3;
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
 }
 
-.balance-card h1 {
-    font-size: 2em;
-    color: white;
-    margin: 5px 0 0;
+.saldo p {
+  font-weight: 500;
 }
 
-.action-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-    gap: 10px;
+.saldo h1 {
+  font-size: 2em;
+  margin-top: 5px;
 }
 
-.action-btn {
-    background-color: #f4c430;
-    border-radius: 15px;
-    padding: 10px;
-    flex: 1 1 22%;
-    text-align: center;
-    font-size: 0.9em;
+/* Acciones */
+.acciones {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 15px 0;
+  flex-wrap: wrap;
 }
 
-.icon {
-    font-size: 1.5em;
-    display: block;
+.accion {
+  background-color: #ffe267;
+  width: 22%;
+  min-width: 70px;
+  flex: 1 1 22%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 0.85em;
 }
 
-.section {
-    margin-bottom: 25px;
+.accion img {
+  height: 24px;
+  margin-bottom: 5px;
 }
 
-.bar-chart {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 10px;
+/* Tarjeta */
+.tarjeta {
+  background-color: #ffcd00;
+  padding: 15px;
+  border-radius: 16px;
+  margin: 20px 0;
+  color: #000;
 }
 
-.bar {
-    width: 20%;
-    background-color: #f4c430;
-    border-radius: 5px;
-    transition: height 0.3s;
+.fila-superior {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
-.bar-labels {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 5px;
-    font-size: 0.9em;
+.fila-superior img {
+  height: 30px;
 }
 
-.goal {
-    display: flex;
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 10px;
-    align-items: center;
-    gap: 10px;
+.nfc {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  font-size: 0.9em;
 }
 
-.goal-icon {
-    font-size: 2em;
-    background-color: #f4c430;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.nfc img {
+  height: 18px;
 }
 
-.goal-info {
-    flex: 1;
+/* Metas */
+.metas {
+  margin-top: 20px;
 }
 
-.goal-title {
-    font-size: 0.9em;
-    background-color: #ffe89f;
-    padding: 2px 4px;
-    display: inline-block;
-    margin-bottom: 5px;
+.meta {
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  margin-top: 10px;
 }
 
-.progress-bar {
-    background-color: #eee;
-    height: 10px;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-bottom: 5px;
+.meta-encabezado {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
 }
 
-.progress {
-    background-color: #f4c430;
-    height: 100%;
-    width: 0;
+.meta-encabezado img {
+  height: 24px;
 }
 
-.setting-option {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 0.95em;
+.meta-progreso span {
+  font-size: 0.85em;
+  margin-bottom: 5px;
+  display: block;
 }
 
-.setting-option .icon {
-    font-size: 1.5em;
-    margin-right: 10px;
+.barra {
+  background-color: #ffedaa;
+  border-radius: 8px;
+  height: 10px;
+  overflow: hidden;
 }
 
-
-/* GENERAL RESPONSIVE STYLES */
-@media (max-width: 768px) {
-    .action-buttons {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .action-btn {
-        flex: 1 1 45%;
-        min-width: 120px;
-    }
-
-    .bar-labels {
-        font-size: 0.8em;
-    }
-
-    .goal {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .goal-icon {
-        margin-bottom: 10px;
-    }
-
-    .setting-option {
-        flex-direction: row;
-        align-items: center;
-        font-size: 0.9em;
-    }
-
-    .setting-option .icon {
-        font-size: 1.2em;
-    }
-
-    .balance-card h1 {
-        font-size: 1.8em;
-    }
+.relleno {
+  width: 50%;
+  background-color: #fcbf49;
+  height: 100%;
 }
 
+/* Configuración */
+.configuracion {
+  margin-top: 25px;
+}
+
+.boton-config {
+  background-color: #ffe267;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.boton-config img {
+  height: 22px;
+}
+
+/* Menú inferior */
+.menu-inferior {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffdb5c;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 0;
+  border-top: 1px solid #ccc;
+  z-index: 1000;
+}
+
+.menu-inferior .opcion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.75em;
+}
+
+.menu-inferior img {
+  height: 24px;
+}
+
+/* RESPONSIVIDAD */
 @media (max-width: 480px) {
-    .action-btn {
-        flex: 1 1 100%;
-    }
+  .encabezado {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
 
-    .header {
-        flex-direction: row;
-        justify-content: flex-start;
-    }
+  .saludo {
+    align-self: flex-end;
+  }
 
-    .brand {
-        font-size: 1.2em;
-    }
+  .acciones {
+    justify-content: center;
+  }
 
-    h2 {
-        font-size: 1.2em;
-    }
+  .accion {
+    width: 45%;
+    flex: 1 1 45%;
+  }
 
-    .balance-card h1 {
-        font-size: 1.5em;
-    }
+  .menu-inferior .opcion {
+    font-size: 0.7em;
+  }
 
-    .goal-title {
-        font-size: 0.8em;
-    }
+  .menu-inferior img {
+    height: 20px;
+  }
 
-    .bar-chart .bar {
-        width: 25%;
-    }
+  .boton-config img,
+  .meta-encabezado img,
+  .nfc img,
+  .accion img,
+  .logo-nombre img {
+    height: 20px;
+  }
 }

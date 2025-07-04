@@ -5,29 +5,52 @@
 }
 
 body {
-  background-image: url('imagenes/fondo.jpg'); /* Ruta a tu imagen */
-  background-size: cover;         /* Que cubra toda la pantalla */
-  background-position: center;    /* Centrada */
-  background-repeat: no-repeat;   /* No se repita */
-  min-height: 100vh;              /* Asegura altura mínima */
+  background-image: url('imagenes/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   color: rgb(0, 0, 0);
 }
 
-/* Cabecera */
+/* Cabecera (logo + botones) */
 .cabecera-sitio {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px 20px;
+  padding: 20px 30px;
+  flex-wrap: wrap;
 }
 
+/* Logo */
 .logo-sitio img {
-  height: 50px; /* un poco más grande */
-  width: auto;  /* que mantenga proporción */
+  height: 50px;
+  width: auto;
 }
 
+/* Botones arriba a la derecha */
+.botones-acceso {
+  display: flex;
+  gap: 10px;
+}
+
+.boton-acceso {
+  background-color: #fff3c4;
+  border: 2px solid #ffb703;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.boton-acceso:hover {
+  background-color: #ffdb5c;
+}
 
 /* Sección principal */
 .seccion-principal {
@@ -55,26 +78,18 @@ body {
   margin-bottom: 20px;
 }
 
+.contenido-principal h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
 .contenido-principal p {
   font-size: 1.125rem;
   margin-bottom: 30px;
   color: #000000;
 }
 
-/* Botón de llamada a la acción */
-.boton-inicio {
-  background-color: #f4b400;
-  color: #000;
-  padding: 14px 28px;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  
-}
 
-.boton-inicio:hover {
-  background-color: rgb(255, 218, 116);
-}
 
 /* Imagen principal */
 .imagenes-principales {
@@ -118,5 +133,15 @@ body {
     width: 90%;
     max-width: 300px;
     transform: none;
+  }
+
+  .cabecera-sitio {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .botones-acceso {
+    align-self: flex-end;
   }
 }

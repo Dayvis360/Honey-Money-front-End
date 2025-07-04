@@ -1,49 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="imagenes/logo_cabezera.png" />
 </head>
 <body>
     <header class="cabecera-sitio">
-    <div class="logo-sitio">
-      <img src="imagenes/logo.png" alt="Logo del sitio" />
-    </div>
-  </header>
-    <div class="login-contenedor">
-        <form class="login-box">
-            <h1>Honey Money</h1> 
-            <t> Correo o DNI </t>
-            <div class="input-group">
+        <div class="logo-sitio">
+            <a href="../index.html">
+            <img src="imagenes/logo.png" alt="Logo del sitio" />
+            </a>
+        </div>
+    </header>
+
+    <div class="contenedor-login">
+        <form class="formulario-login">
+            <h1>Honey Money</h1>
+
+            <label for="correo_dni">Correo o DNI</label>
+            <div class="grupo-input">
                 <input id="correo_dni" type="email" placeholder="Correo/DNI" required>
             </div>
 
-            <div class="input-group">
-                <t> Contraseña </t>
-                <input type="password" id="contraseña" placeholder="Contraseña" required>
-                <span class="toggle-password" onclick="togglePassword()">👁️</span>
+
+            <label id="contraseña">Contraseña</label>
+            <div class="grupo-campo">
+                <input type="password" id="password1" required>
+                <img src="imagenes/ojo_cerrado.png" alt="Mostrar contraseña" class="icono-ojo" 
+                onclick="togglePassword(this, 'password1')">
             </div>
 
-            <div class="password-hint">
+            <div class="ayuda-contraseña">
                 <span>¿Olvidaste tu contraseña?</span>
                 <a href="../recover/recover.html">Recordar</a>
             </div>
 
-            <button type="button" class="signin-btn" onclick="location.href='../home/home.html'">Entrar</button>
+            <button type="button" class="boton-ingresar" onclick="location.href='../home/home.html'">Entrar</button>
 
-            <p class="signup-link">¿No tienes una cuenta? <a href="../sigin/sigin.html">Crear una cuenta</a></p>
+            <p class="enlace-registro">¿No tienes una cuenta? <a href="../sigin/sigin.html">Crear una cuenta</a></p>
         </form>
     </div>
 
     <script>
-        function togglePassword() {
-            const passwordInput = document.getElementById("password");
-            const icon = document.querySelector(".toggle-password");
-            const isPassword = passwordInput.type === "password";
-            passwordInput.type = isPassword ? "text" : "password";
-            icon.textContent = isPassword ? "🙈" : "👁️";
+        function togglePassword(img, campoId) {
+            const campo = document.getElementById(campoId);
+            const mostrando = campo.type === "text";
+
+            campo.type = mostrando ? "password" : "text";
+            img.src = mostrando ? "imagenes/ojo_cerrado.png" : "imagenes/ojo_abierto.png";
+            img.alt = mostrando ? "Mostrar contraseña" : "Ocultar contraseña";
         }
     </script>
 </body>

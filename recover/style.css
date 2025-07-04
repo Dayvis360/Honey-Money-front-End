@@ -1,105 +1,123 @@
-/* Estilos generales y centrado */
-body {
+/* Reset básico */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f2f2f2;
+}
+
+/* Fondo general */
+body {
+  background-color: transparent; 
+  font-family: Arial, sans-serif;
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.cabecera-sitio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 20px;
+}
+
+.logo-sitio img {
+  height: 50px; /* ajustá el tamaño como necesites */
 }
 
 /* Contenedor principal */
-.contenedor-principal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Ventana de recuperación */
-.ventana-recuperacion {
-  background-color: white;
+.contenedor {
+  background-color: #fff0b3;
+  border: 3px solid #ffd83d;
+  border-radius: 20px;
   padding: 30px 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  width: 400px;
-  position: relative;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
 
-/* Encabezado */
-.encabezado-recuperacion {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.titulo-recuperacion {
+/* Título */
+.titulo {
+  text-align: center;
+  color: #4d2e00;
   font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.boton-cerrar {
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-/* Mensaje de confirmación */
-.mensaje-confirmacion {
-  background-color: #f7f7f7;
-  border-radius: 6px;
-  padding: 10px;
-  font-size: 14px;
-  color: #333;
   margin-bottom: 20px;
 }
 
-.icono-info {
-  margin-right: 6px;
+/* Mensaje informativo */
+.mensaje {
+  background-color: #ffeaa7;
+  color: #4d2e00;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 15px;
+  margin-bottom: 25px;
+  text-align: center;
 }
 
-/* Formulario */
-.formulario-recuperacion {
-  display: flex;
-  flex-direction: column;
-}
-
-.etiqueta-correo,
-.etiqueta-codigo {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #666;
-}
-
-.campo-correo,
-.campo-codigo {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
-  margin-top: 4px;
-}
-
-.campo-telefono:disabled {
-  background-color: #eee;
-}
-
-/* Botón */
-.boton-confirmar {
-  margin-top: 20px;
-  padding: 12px;
-  font-size: 16px;
-  background-color: #f4b400;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+/* Etiquetas */
+.etiqueta {
   font-weight: bold;
+  color: #4d2e00;
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
 }
 
-.boton-confirmar:hover {
-  background-color: #c29415;
+/* Campos de entrada */
+.input-correo,
+.input-codigo {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ffd83d;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  background-color: #fff9d6;
+  outline: none;
+}
+
+.input-correo::placeholder,
+.input-codigo::placeholder {
+  color: #aaa;
+}
+
+/* Botón de confirmación */
+.boton {
+  width: 100%;
+  padding: 14px;
+  background-color: #ffd83d;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4d2e00;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.boton:hover {
+  background-color: #f0c200;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .contenedor {
+    padding: 25px 20px;
+  }
+
+  .mensaje {
+    font-size: 14px;
+  }
+
+  .boton {
+    font-size: 15px;
+  }
+}
+
+/* Capitalización visual */
+input[type="text"] {
+  text-transform: capitalize;
 }

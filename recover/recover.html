@@ -5,30 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Recuperación de contraseña</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="imagenes/logo_cabezera.png" />
 </head>
 <body>
-  <div class="contenedor-principal">
-    <div class="ventana-recuperacion">
-      <div class="encabezado-recuperacion">
-        <h2 class="titulo-recuperacion">Recuperación de contraseña</h2>
+  <header class="cabecera-sitio">
+        <div class="logo-sitio">
+            <a href="../index.html">
+            <img src="imagenes/logo.png" alt="Logo del sitio" />
+            </a>
+        </div>
+    </header>
+  <div class="contenedor">
+    <div class="ventana">
+      <div class="encabezado">
+        <h2 class="titulo">Recuperación de contraseña</h2>
       </div>
 
-      <div class="mensaje-confirmacion">
-        <p class="texto-confirmacion">
+      <div class="mensaje">
+        <p class="texto">
           Se envió a tu teléfono un mensaje de texto con un código de confirmación para la recuperación de la contraseña.
         </p>
       </div>
 
-      <form class="formulario-recuperacion">
-        <label for="telefono" class="etiqueta-correo">Tu correo</label>
-        <input type="text" id="correo" class="campo-correo" placeholder="Ingresar correo" />
+      <form class="formulario">
+        <label for="correo" class="etiqueta">Tu correo</label>
+        <input type="text" id="correo" class="input-correo" placeholder="Ingresar correo" />
 
-        <label for="codigo" class="etiqueta-codigo">Código de verificación</label>
-        <input type="text" id="codigo" class="campo-codigo" placeholder="Ingresá el código" />
+        <label for="codigo" class="etiqueta">Código de verificación</label>
+        <input type="text" id="codigo" class="input-codigo" placeholder="Ingresá el código" />
 
-        <button type="button" class="boton-confirmar" onclick="window.location.href='../login/login.html'"> Confirmar cambio de contraseña </button>
-
-
+        <button type="button" class="boton" onclick="window.location.href='../login/login.html'">
+          Confirmar cambio de contraseña
+        </button>
       </form>
     </div>
   </div>
