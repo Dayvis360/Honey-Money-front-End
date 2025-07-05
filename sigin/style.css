@@ -175,9 +175,12 @@ body {
 
 /* Capitalización visual */
 input[type="text"],
-input[type="email"],
 input[type="tel"] {
   text-transform: capitalize;
+}
+
+input[type="email"]{
+    text-transform: none;
 }
 
 /* Estilo para el select de nacionalidad */
