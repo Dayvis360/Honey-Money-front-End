@@ -202,3 +202,21 @@ input[type="tel"] {
   cursor: pointer;
   box-sizing: border-box;
 }
+
+.enlace-login {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 15px;
+  color: #4d2e00;
+}
+
+.enlace-login a {
+  color: #c97a00;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.enlace-login a:hover {
+  color: #ffd83d;
+}
