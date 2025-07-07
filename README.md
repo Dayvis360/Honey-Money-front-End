@@ -8,6 +8,15 @@ diseño documentacion: https://docs.google.com/document/u/0/d/1Olg-dPcxPZBhPoW5S
 
 back end: https://github.com/Dayvis360/honey-money-back-end.git
 
+documentacion de la base de datos:
+1. Nombre del campo contraseña:
+El uso de tildes en nombres de columnas (como contraseña) no es una buena práctica, ya que puede generar errores en algunas herramientas o integraciones. Es preferible usar nombres como contrasena o password.
+
+2. Restricciones únicas:
+Campos como dni, gmail, y posiblemente telefono deberían tener una restricción UNIQUE si se espera que no se repitan entre usuarios.
+
+3. Tipo de dato para telefono:
+El tipo numeric es permisible, pero muchas veces telefono se guarda como varchar para conservar ceros iniciales y permitir caracteres especiales como + o -.
 
 # Documentación del Frontend
 
