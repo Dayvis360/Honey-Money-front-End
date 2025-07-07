@@ -139,9 +139,14 @@ body {
 }
 
 .enlace-registro a {
-  color: #e6b800;
+  color: #c97a00;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.2s;
+}
+
+.enlace-registro a:hover {
+  color: #ffd83d;
 }
 
 /* Responsive */
