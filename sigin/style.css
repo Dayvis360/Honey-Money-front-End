@@ -70,7 +70,7 @@ body {
   background-color: #fff9d6;
   color: #333;
   outline: none;
-  text-transform: capitalize;
+  text-transform: none !important;
   padding-right: 40px; /* Espacio para el icono del ojo */
 }
 
@@ -173,13 +173,6 @@ body {
   }
 }
 
-/* Capitalización visual */
-input[type="text"],
-input[type="email"],
-input[type="tel"] {
-  text-transform: capitalize;
-}
-
 /* Estilo para el select de nacionalidad */
 .nacionalidad select {
   width: 100%;
@@ -190,7 +183,7 @@ input[type="tel"] {
   background-color: #fff9d6;
   color: #333;
   outline: none;
-  text-transform: capitalize;
+  text-transform: none !important;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -219,4 +212,45 @@ input[type="tel"] {
 
 .enlace-login a:hover {
   color: #ffd83d;
+}
+
+.mensaje-exito {
+  background: #d4edda;
+  color: #155724;
+  border: 1.5px solid #28a745;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+.mensaje-error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1.5px solid #dc3545;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.grupo-campo input[type="password"] {
+  text-transform: none !important;
+}
+
+/* Eliminar text-transform de todos los inputs */
+.grupo-campo input,
+.grupo-input input,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  text-transform: none !important;
+}
+
+#nombre, #apellido {
+  text-transform: capitalize !important;
 }

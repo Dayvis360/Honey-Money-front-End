@@ -28,7 +28,7 @@
 
             <label id="contraseña">Contraseña</label>
             <div class="grupo-campo">
-                <input type="password" id="password1" required>
+                <input type="password" id="password1" required autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">
                 <img src="imagenes/ojo_cerrado.png" alt="Mostrar contraseña" class="icono-ojo" 
                 onclick="togglePassword(this, 'password1')">
             </div>
@@ -38,7 +38,8 @@
                 <a href="../recover/recover.html">Recordar</a>
             </div>
 
-            <button type="button" class="boton-ingresar" onclick="location.href='../home/home.html'">Entrar</button>
+            <div id="mensaje"></div>
+            <button type="button" class="boton-ingresar">Entrar</button>
 
             <p class="enlace-registro">¿No tienes una cuenta? <a href="../sigin/sigin.html">Crear una cuenta</a></p>
         </form>
@@ -54,5 +55,6 @@
             img.alt = mostrando ? "Mostrar contraseña" : "Ocultar contraseña";
         }
     </script>
+    <script src="scrip.js"></script>
 </body>
 </html>

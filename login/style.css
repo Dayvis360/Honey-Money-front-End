@@ -168,3 +168,40 @@ body {
     height: 20px;
   }
 }
+
+.mensaje-exito {
+  background: #d4edda;
+  color: #155724;
+  border: 1.5px solid #28a745;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+.mensaje-error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1.5px solid #dc3545;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* Eliminar text-transform de todos los inputs */
+.grupo-campo input,
+.grupo-input input,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  text-transform: none !important;
+}
+
+#nombre, #apellido {
+  text-transform: capitalize !important;
+}
