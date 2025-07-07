@@ -1,3 +1,6 @@
+
+Corriendo en : https://dayvis360.github.io/Honey-Money-front-End/index.html
+
 Diseño en Figma: https: //www.figma.com/design/cH0qQHYQ0PU4QGilz9OmZ6/Inicio?m=auto&t=IoEj5S7yIOgBiNjq-6 
 
 documentacion testing: https://docs.google.com/document/d/1HG-5jw46BO7YHMrv7eNnTvfXRWPpw6Y6j_60rhpmHcc/edit?usp=drivesdk
