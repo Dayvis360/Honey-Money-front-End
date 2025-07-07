@@ -1,5 +1,14 @@
 Diseño en Figma: https: //www.figma.com/design/cH0qQHYQ0PU4QGilz9OmZ6/Inicio?m=auto&t=IoEj5S7yIOgBiNjq-6 
 
+documentacion testing: https://docs.google.com/document/d/1HG-5jw46BO7YHMrv7eNnTvfXRWPpw6Y6j_60rhpmHcc/edit?usp=drivesdk
+
+presentacion de front end: https://www.canva.com/design/DAGrBpF7X9g/0C7tFIye0NZusFiMNPO15A/edit?ui=eyJEIjp7IlQiOnsiQSI6IlBCUGRwRDhnWFhRTXRZZDMifX19&utm_content=DAGrBpF7X9g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+diseño documentacion: https://docs.google.com/document/u/0/d/1Olg-dPcxPZBhPoW5S0F9UfVO-shqqHupEsIIGsbZJuI/mobilebasic?pli=1
+
+back end: https://github.com/Dayvis360/honey-money-back-end.git
+
+
 # Documentación del Frontend
 
 ## Flujo de registro y login
