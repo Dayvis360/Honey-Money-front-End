@@ -1,6 +1,7 @@
 document.getElementById("register-form").addEventListener("submit", async (e)=>{
     e.preventDefault();
-    const res = await fetch("RUTA", {
+
+    const res = await fetch("http://localhost:3000/signup", {
         method: "Post",
         headers:{
             "Content_Type" : "applicacion/json"
@@ -12,10 +13,10 @@ document.getElementById("register-form").addEventListener("submit", async (e)=>{
             f_nac:e.target.fecha_de_nacimiento.value, 
             correo: e.target.correo.value, 
             telefono: e.target.telefono.value, 
-            contraseña: e.target.contraseña.value
+            contrasena: e.target.contraseña.value
         })
     })
-        
+       // {"nombre":"","apellido":"","dni":"","f_nac":"","correo":"","telefono":"","contraseña":""}
     
     
 })
